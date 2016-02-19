@@ -16,6 +16,5 @@ public class LoginController {
 		System.out.println("hello world");
 		mv.setViewName("jsp/MyJsp");
 		return mv;
-		//×¢ÊÍ²âÊÔ
 	}
 }
