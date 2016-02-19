@@ -1,0 +1,257 @@
+/*
+jqgrid样式覆盖
+--------------------------------------------------------------------------*/
+/*jqgrid表头线颜色、背景颜色、tabs 选项卡背景颜色    jquery-ui-1.8.20.custom.css 68行*/
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default { 
+	border: none; 
+	border-bottom: 2px solid rgb(51,153,204); 
+	background: #e3f1fb; 	
+	font:12px "微软雅黑",宋体,Microsoft YaHei, Tahoma, Helvetica, Arial, sans-serif;
+	font-weight:bolder !important; 
+	color: #000; 
+}
+
+/*表头高度*/
+.ui-jqgrid .ui-jqgrid-htable th {
+	height: 28px;
+	padding 0 2px;
+}
+
+/*jqgrid表体表格线颜色 ui-jqgrid.css 178行*/
+.ui-jqgrid tr.jqgrow td {
+	font:12px "微软雅黑",宋体,Microsoft YaHei, Tahoma, Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	overflow: hidden;
+	white-space: nowrap;
+	height: 28px;
+	padding: 0 2px 0 2px;
+	border: none !important; 
+	/*border-bottom: 0px solid #f1f6fa;*/
+	/*border-color: rgb(239,239,239);	*/
+}
+/*jqgrid分组表格线颜色 ui-jqgrid.css 196行*/
+.ui-jqgrid tr.jqgroup td {
+    font-weight: normal;
+    overflow: hidden;
+    white-space: nowrap;
+    height: 28px;
+    padding: 0px 2px;
+    background-color:rgb(250,250,250) ;
+    border: none !important; 
+    /*border-bottom: 1px solid rgb(239,239,239);*/
+}
+/* altRows属性（斑马纹）需要的样式  */
+.ui-priority-secondary { background:#f1f6fa 50% 50% repeat-x; font-weight: normal; }
+
+/*------------------------------------------------------------------------------------
+jqGrid当前行及选择行的背景色 jquery-ui-1.8.20.custom.css
+鼠标移动到记录行上的背景颜色（图片）、字体颜色 jquery-ui-1.8.20.custom.css 70行 
+--------------------------------------------------------------------------------------*/
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus { 
+		border: none !important; 
+		background: #ceeaf6; 
+		font-weight: normal; 
+		color: #000; 
+} 
+/*--------------------------------------------------------------------
+选中行背景颜色（图片）、字体颜色 jquery-ui-1.8.20.custom.css 78行
+----------------------------------------------------------------------*/
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight  {
+	border: none; 
+	background: #f9c489; 
+	color: #0e27c0; 
+}
+/*-----------------------------------------------------------------
+1. jqgrid样式
+	1.1 数据编辑方式的jqgrid样式（表格线以及输入文本框）.ui-jqgrid tr.ui-row-ltr
+-------------------------------------------------------------------*/
+.ui-jqgrid tr.ui-row-ltr tr {border-bottom: solid 0px rgb(239,239,239);height: 22px;}
+.ui-jqgrid tr.ui-row-ltr th {
+	background-color:rgb(250,250,250) ;
+	padding: 5px 10px;
+	vertical-align: middle;
+	text-align: right;
+	border-right: none !important;
+}
+.ui-jqgrid tr.ui-row-ltr td {
+	padding-left: 5px ;
+	vertical-align: middle;
+	border-right: none !important;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+/* 用于包裹富文本编辑器输出内容 */
+.ui-jqgrid tr.ui-row-ltr td div{
+	height: 28px ;
+	padding-top: 2px;
+	vertical-align: middle;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+.ui-jqgrid tr.ui-row-ltr td select {
+	width: 100%;
+	height:28px;	
+	line-height:28px;	
+	border: solid 1px #ffffff;
+	cursor: pointer;
+}
+.ui-jqgrid tr.ui-row-ltr td a {
+	display: inline-block;
+	color: rgb(56,139,255);
+	height:22px;
+	line-height:22px;
+	padding: 0 2px;
+	border: 0px solid rgba(256,139,255,0); /*完全透明*/
+}
+.ui-jqgrid tr.ui-row-ltr td a i {height:22px;line-height:20px;}
+.ui-jqgrid tr.ui-row-ltr td a:hover {
+	color: rgb(255,255,255);
+	background: rgb(248,132,0);
+	border: 0px solid rgb(248,132,0);	
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+}
+.ui-jqgrid tr.ui-row-ltr td input[type="text"],.ui-jqgrid tr.ui-row-ltr td input[type="password"] {
+	width: 100%;
+	height: 31px;	/*比tr的高度适当高3个像素，这样与td就刚好融合到一起  */
+	line-height: 31px;
+   	border: solid 0px #ffffff;
+	padding:0 5px 0 5px;
+	cursor: pointer;
+}
+.ui-jqgrid tr.ui-row-ltr td input[type="text"]:hover ,.ui-jqgrid tr.ui-row-ltr td input[type="password"]:hover,.ui-jqgrid tr.ui-row-ltr td textarea:hover,.ui-jqgrid tr.ui-row-ltr td select:hover{background:#fcf7ec;border: solid 0px rgb(239,239,239);}
+.ui-jqgrid tr.ui-row-ltr td input:focus,.ui-jqgrid tr.ui-row-ltr td select:focus,.ui-jqgrid tr.ui-row-ltr td textarea:focus{background:#fae9e6;border: solid 0px rgb(239,239,239);}
+.ui-jqgrid tr.ui-row-ltr th input[type="button"] {float: right; margin-right: 30px}
+
+/*分页条*/
+.ui-jqgrid .ui-jqgrid-pager {
+	border-top: 2px solid rgb(51,153,204);
+	border-bottom: 0 none !important;
+    border-left: 0 none !important;
+    border-right: 0 none !important;
+    font-size: 11px;
+    height: 25px;
+    margin: 0 !important;
+    overflow: hidden;
+    padding: 0 !important;
+    position: relative;
+    white-space: nowrap;
+    background: #fff !important;
+}
+.ui-jqgrid .ui-jqgrid-pager input,.ui-jqgrid .ui-jqgrid-pager select{
+	text-align:center;
+	height: 18px;
+	line-height: 18px;
+}
+/*分页条中的间隔竖线 隐藏*/
+.ui-jqgrid .ui-separator {
+    border-left: 0px solid #cccccc;
+    border-right: 0px solid #cccccc;
+	float:right;
+	height:18px;
+	margin:1px;
+}
+/*分页条中文字垂直居中*/
+.ui-jqgrid .ui-pg-table td{line-height: 22px;}
+/*分页条中的 选择每页显示行数 选择框 隐藏（配合自动计算每页显示行数功能）*/
+.ui-jqgrid .ui-pg-selbox{display:none;}
+
+/*图标按钮*/
+.ui-state-default .ui-icon {background-image: url("images/ui-icons_888888_256x240.png");}
+.ui-widget-content .ui-icon {background-image: url("images/ui-icons_222222_256x240.png");}
+.ui-icon {background-image: url("images/ui-icons_222222_256x240.png");height: 16px;width: 16px;}
+.ui-icon {background-repeat: no-repeat;display: block;overflow: hidden;text-indent: -99999px;}
+.ui-icon-seek-next { background-position: -32px -160px; }
+.ui-icon-seek-prev { background-position: -48px -160px; }
+.ui-icon-seek-end { background-position: -64px -160px; }
+.ui-icon-seek-start { background-position: -80px -160px; }
+/* ui-icon-seek-first is deprecated, use ui-icon-seek-start instead */
+.ui-icon-seek-first { background-position: -80px -160px; }
+
+/*--------------------jqgrid表格样式结束----------------------*/
+
+
+/*
+zTree样式覆盖
+------------------------------------------------------------------------------------*/
+.ztree * {
+    font-family: "微软雅黑",宋体,Microsoft YaHei, Tahoma, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+}
+
+.ztree li a {padding:1px 3px 0 0; margin:0; cursor:pointer; height:17px; color:#333; background-color: transparent;text-decoration:none; vertical-align:top; display: inline-block}
+.ztree li a:hover {text-decoration:none;color:#ff8a00;}
+.ztree li a.curSelectedNode {padding-top:0px; background-color:#FFE6B0; color:black; height:16px; border:1px #FFB951 solid; opacity:0.8;}
+.ztree li a.curSelectedNode_Edit {padding-top:0px; background-color:#FFE6B0; color:black; height:16px; border:1px #FFB951 solid; opacity:0.8;}
+
+/*
+uploadify样式覆盖
+------------------------------------------------------------------------------------*/
+.uploadify-button {
+    background-color: #388BFF;
+    border: 1px solid;
+    border-color: #3C8DFF #408FFE #3680E6;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: normal;
+    height: 24px;
+    line-height: 24px;
+    margin: 0;
+    overflow: visible;
+    padding: 0 10px;
+    text-align: center;
+    vertical-align: middle;
+    -moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;	
+}
+.uploadify:hover .uploadify-button {
+    background-color: #388BFF;
+    color: #fff;
+    border-color: #2678ec #2575e7 #1c6fe2 #2677b7;
+	box-shadow: 1px 1px 1px rgba(0,0,0,0.4);   
+}
+
+.newsDetail_center_wjt_title{
+	min-height: 30px;
+	height:auto;
+	line-height: 28px;
+	margin-left: auto;
+	margin-right:auto;
+	text-align: center;
+	width: 80%;
+	margin-top: 10px;
+	color: red;
+	font-size: 40px;
+	font-family: '华文中宋';
+	line-height: 60px;
+	font-weight:bold;
+}
+
+.newsDetail_center_wh_title{
+	width: 80%;
+	margin-left: auto;
+	margin-right:auto;
+	font-family: '华文中宋';
+	font-size: 16px;
+	margin-top: 10px;
+	height:auto;
+	text-align: center;
+	font-weight: bold;
+}
+.red_content_hang{
+	border-bottom: 2px double red;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top:5px;
+	margin-bottom: 40px;
+}
